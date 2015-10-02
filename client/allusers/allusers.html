@@ -1,0 +1,14 @@
+<template name="allusers">
+	<div class="panel panel-success pt30">
+		<div class="panel-heading">
+			Registered Users
+		</div>
+  		<div class="panel-body">
+    		<ul>
+				{{#each workers}}
+			  		{{> worker}}
+			  	{{/each}}
+  			</ul>	
+		</div>
+	</div>
+</template>

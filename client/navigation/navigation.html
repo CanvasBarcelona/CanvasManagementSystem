@@ -1,0 +1,16 @@
+<template name="navigation">
+    <div class="col-md-4 pt30">
+      <ul>
+      	<li>{{>loginButtons}}</li>
+        <li class="liNav"><a class="aNav" href="{{pathFor 'home'}}">User Registration</a></li>
+        <li class="liNav"><a class="aNav" href="{{pathFor 'allusers'}}">Registered Users</a></li>
+        <li>
+        	Meeting Rooms
+        	<ul>
+        		<li><a class="aNav" href="{{pathFor 'mrb1'}}">Meeting Room Big 1</a></li>
+        		<li><a class="aNav" href="{{pathFor 'mrb2'}}">Meeting Room Big 2</a></li>
+        	</ul>
+        </li>
+      </ul>
+    </div>
+</template>
