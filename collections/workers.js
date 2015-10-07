@@ -1,4 +1,7 @@
 Workers = new Meteor.Collection('workers', {});
+Workers.initEasySearch(['name', 'lastName', 'occupation'],{
+	'use' : 'mongo-db'
+});
 
 Workers.attachSchema(new SimpleSchema({
 	name: {
@@ -21,9 +24,7 @@ Workers.attachSchema(new SimpleSchema({
 		optional:true
 	},
 	occupation:{
-		type:String,
-		label: "Occupation",
-		max:200
+        type: 'tags'
 	},
 	email: {
 		type:String,
@@ -32,6 +33,15 @@ Workers.attachSchema(new SimpleSchema({
 	phone: {
 		type:Number,
 		label:"Number",
-	}
+	}/*,
+	cumple: {
+    type: [Date],
+    optional: true,
+    autoform: {
+      afFieldInput: {
+        type: "string"
+      }
+    }
+  }*/
 }))
 

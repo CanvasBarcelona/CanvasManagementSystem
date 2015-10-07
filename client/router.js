@@ -20,6 +20,16 @@ Router.route('allusers',{
 		}
 	}
 });
+Router.route('/allusers/:_id',{
+	template: 'singleUser',
+	name: 'singleUser',
+	data: function(){
+		return {
+			worker: Workers.findOne(this.params._id),
+			workers: Workers.find()
+		}
+	}
+});
 Router.route('mrb1',{
 	path: '/mrb1',
 	template: 'mrb1',

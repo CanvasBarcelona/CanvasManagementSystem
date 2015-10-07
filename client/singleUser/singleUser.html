@@ -1,4 +1,4 @@
-<template name="allusers">
+<template name="singleUser">
 	<div class="col-md-4">
 		<div class="panel panel-success pt30">
 			<div class="panel-heading">
@@ -10,8 +10,8 @@
 	  		<div class="panel-footer">
 	  			<ul>
 					{{#each workers}}
-				  		{{> worker}}
-				  		{{pathFor route="singleUser"}}
+				  		<a href="{{pathFor '/allusers/:_id'}}">gay</a>
+						{{> worker}}
 				  	{{/each}}
 	  			</ul>
 			</div>
@@ -24,7 +24,7 @@
 			</div>
 	  		<div class="panel-body">
 	  			<div id="nameHere">
-	  			
+	  				{{worker.name}} {{worker.occupation}}
 	  			</div>
   			</div>	
 		</div>

@@ -1,0 +1,19 @@
+<template name="search">
+    {{> esInput index="workers" placeholder="Search..." }}
+
+    <ul>
+        {{#esEach index="workers"}}
+            {{>worker}}
+        {{/esEach}}
+    </ul>
+
+    {{> esLoadMoreButton index="workers"}}
+
+    {{#ifEsHasNoResults index="workers"}}
+        <div class="no-results">No results found!</div>
+    {{/ifEsHasNoResults}}
+
+    {{#ifEsIsSearching index="workers"}}
+            <div>Loading...</div>
+    {{/ifEsIsSearching}}
+</template>

@@ -39,8 +39,7 @@ input[type="text"],input[type="email"], input[type="date"],input[type="number"] 
   padding: 10px 0;
   background: transparent;
   border: none;
-  width: 50%;
-  padding-right: 80px;
+  width: 100%;
   font-size: 1em;
   border-bottom: 1px solid rgba(0,0,0,0.3);
 }
