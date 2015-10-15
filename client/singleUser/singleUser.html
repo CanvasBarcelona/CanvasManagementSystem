@@ -1,4 +1,9 @@
 <template name="singleUser">
+<script type="text/javascript">
+	var fecha = new Date({{worker.birthdate}});
+	var fecha2 = moment(fecha).format('LL')  ;
+	$('#birthdateSpan').text(fecha2 + '<hr />');
+</script>
 	<div class="col-md-4">
 		<div class="panel panel-success pt30">
 			<div class="panel-heading">
@@ -10,8 +15,8 @@
 	  		<div class="panel-footer">
 	  			<ul>
 					{{#each workers}}
-				  		<a href="{{pathFor '/allusers/:_id'}}">gay</a>
 						{{> worker}}
+						<hr />
 				  	{{/each}}
 	  			</ul>
 			</div>
@@ -20,11 +25,16 @@
 	<div class="col-md-8">
 		<div class="panel panel-success pt30">
 			<div class="panel-heading">
-				Users
+				User Details
 			</div>
 	  		<div class="panel-body">
 	  			<div id="nameHere">
-	  				{{worker.name}} {{worker.occupation}}
+	  				<strong>Full Name : </strong>{{worker.name}} {{worker.lastName}} <hr />
+	  				<strong>Occupation: </strong>{{worker.occupation}}<hr />
+	  				<strong>ID        : </strong>{{worker.docId}} <hr />
+	  				<strong>Email     : </strong>{{worker.email}}<hr />
+	  				<strong>Phone     : </strong>{{worker.phone}}<hr />
+	  				<strong>Birthdate : </strong><span id="birthdateSpan"></span>
 	  			</div>
   			</div>	
 		</div>

@@ -1,12 +1,13 @@
 <template name="worker">
-	<li class="clickme">
+	<li>
 		<p><strong>Name: </strong>{{name}}</p>
 		<p><strong>Last Name: </strong>{{lastName}}</p>
-		<p class="hideThis"><strong>ID document: </strong>{{docId}}</p>
+		<!--<p class="hideThis"><strong>ID document: </strong>{{docId}}</p>
 		<p class="hideThis"><strong>Birthday: </strong>{{birthdate}}</p>
 		<p class="hideThis"><strong>Occupation: </strong>{{occupation}}</p>
 		<p class="hideThis"><strong>Email: </strong>{{email}}</p>
-		<p class="hideThis"><strong>Phone: </strong>{{phone}}</p>
-		<button class="delete hideThis">Remove</button>
+		<p class="hideThis"><strong>Phone: </strong>{{phone}}</p> -->
+		<a style="display:block;" href="{{pathFor route="singleUser"}}" class="btn btn-info">Details</a>
+		<!--<button class="btn btn-danger hideThis">Remove</button>-->
 	</li>
 </template>
